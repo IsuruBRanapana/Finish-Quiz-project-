@@ -1,0 +1,41 @@
+body{
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #fff;
+	background: url(Background1.jpg);
+	background-size: cover;
+}
+h1{
+	background: rgba(44,62,80,0.7);
+	padding: 40px;
+	width: 500px;
+	margin: auto;
+	margin-top: 80px;
+	margin-left:auto;
+	text-align: center;
+}
+#home{
+	background: rgba(44,62,80,0.7);
+	padding: 40px;
+	width: 250px;
+	margin: auto;
+	margin-left:auto;
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+}
+input[type=button]{
+	border:none;
+	background: white;
+	color: black;
+	font-size: 16px;
+	line-height: 25px;
+	padding: 10px 0;
+	border-radius: 12px;
+	cursor: pointer;
+	width: 180px;
+	margin-left: 30px;
+}
+input[type=button]:hover{
+	background: black;
+	color: white;
+}
