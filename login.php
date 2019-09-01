@@ -51,11 +51,11 @@
 		<h2 style="color: white">Log In </h2>
 		<?php  
 			if (isset($errors)&& !empty($errors)) {
-				echo "Invalid user";
-				print_r($errors);
+				echo "Invalid Username or Password";
+				//print_r($errors);
 			}
 		?>
-		<input type="text" name="email" placeholder="E-mail"><br>
+		<input type="email" name="email" placeholder="E-mail"><br>
 		<input type="password" name="password" placeholder="Password"><br><br>
 		<input type="submit" name="login" value="Log In"><br><br><br>
 		Don't have account ? <a href="Signup.php">&nbsp;Sign Up</a>

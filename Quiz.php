@@ -47,22 +47,33 @@ if($result = mysqli_query($connection, $sql)){
 
             }
             echo "<br><br>";
-            echo "<br><form method='post'><input type='text' name='enter' placeholder='Enter answers'><br>";
+            echo "<br><form method='post' action='Quiz.php'><input type='text' name='enter' placeholder='Enter answers'><br><input type='hidden' name='corans' value ='" .array_search($row['correct_ans'],$answers)."' placeholder='Enter your answer'></center><br>";
             echo "<br><center><input type='submit' name = 'submit' value='Enter'></center></form>";
             echo "</div>";
             //validate answer
             if (isset($_POST['submit'])) {
-                $entered_answer=$_POST['enter'];
-                $check=$answers[$entered_answer-1];
-                if($row['correct_ans']==$check){
-                    echo "<script type='text/javascript'> 
-                            prompt('Answer is correct');
+                
+$x = $_POST['enter']-1;
+$y = $_POST['corans'];  
+    
+if ($x < 4 ){
+if (($y == $x) && (!is_null($x)) ){
+     echo "<script type='text/javascript'> 
+                            alert('Answer is correct');
                             </script>";
-                }else{
-                    echo "<script type='text/javascript'> 
-                            alert('Answer isn't correct');
+    /* echo sweetAlert("Sucesso!", "As informações foram atualizadas.", "success");*/
+}
+else{
+     echo "<script type='text/javascript'> 
+                            alert('Answer is incorrect');
                             </script>";
-                }
+}
+}else{
+         echo "<script type='text/javascript'> 
+                            alert('Please Enter Correct Choice');
+                            </script>";
+}   
+
             }
             
             /*echo "<tr>";

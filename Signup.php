@@ -71,7 +71,7 @@ if (isset($_POST['login'])) {
 		<h2 style="color: #fff;">Sign Up</h2><br>
 		<input type="text" name="first_name" placeholder="First Name"><br><br>
 		<input type="text" name="last_name" placeholder="Last Name"><br><br>
-		<input type="text" name="email" placeholder="E-mail"><br><br>
+		<input type="email" name="email" placeholder="E-mail"><br><br>
 		<input type="password" name="password" placeholder="Password"><br><br>
 		<input type="submit" name="login" value="Sign Up">
 	</form>
